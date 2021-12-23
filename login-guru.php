@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               $_SESSION['email'] = $row['guru_email'];
 			  $_SESSION['user_type'] = 'guru';
 			  
-              header('Location: dashboard-guru.php');
+              header('Location: profil-guru.php');
             } else {
                 echo "<script>alert('Email atau password Anda salah. Silahkan coba lagi!')</script>";
             }
