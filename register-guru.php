@@ -48,13 +48,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	<header id="header" class="fixed-top d-flex align-items-center ">
 		<div class="container d-flex align-items-center justify-content-between">
 	
-		  <h1 class="logo"><a href="">Sekolahku</a></h1>
+		  <h1 class="logo"><a href="index.php">Sekolahku</a></h1>
 		  <!-- Uncomment below if you prefer to use an image logo -->
 		  <!-- <a href=index.php" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 	
 		  <nav id="navbar" class="navbar">
 			<ul>
-			  <li><a class="nav-link scrollto" href="">Home</a></li>
+			  <li><a class="nav-link scrollto" href="index.php">Home</a></li>
 			  <li>
 				<div class="dropdown">
 				  <a class="getstarted scrollto active dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="login_carijasa.php">Login</a>

@@ -3,6 +3,6 @@
 session_start();
 session_destroy();
 
-header("Location: login-siswa.php");
+header("Location: index.php");
 
 ?>
