@@ -30,7 +30,7 @@ session_start();
   </head>
   <body>
     <!-- ======= Header ======= -->
-    <header id="header" class="sticky-top d-flex align-items-center bg-black">
+    <header id="header" class="sticky-top d-flex align-items-center" style="background-color: rgba(5, 87, 158, 0.9);">
       <div class="container d-flex align-items-center justify-content-between">
   
         <h1 class="logo"><a href="">Sekolahku</a></h1>
@@ -51,7 +51,7 @@ session_start();
                   <?php echo $_SESSION['email']; ?>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item" href="">Profil</a>
+                  <a class="dropdown-item" href="profil-siswa.php">Profil</a>
                   <a class="dropdown-item" href="logout.php">Keluar</a>
                 </ul>
               </div>
@@ -112,7 +112,7 @@ session_start();
           <div class="col lg-12 info-panel">
             <div class="row row-cols-1 row-cols-md-4 g-4">
    
-            <?php
+            <!-- <?php
                 include_once("database/db_connection.php");
                 $name = (isset($_GET['nama'])) ? $_GET['nama'] : '';
                 $location = (isset($_GET['lokasi'])) ? $_GET['lokasi'] : '';
@@ -145,7 +145,7 @@ session_start();
                     $id = $row['guru_id'];
                     // $ftgid = $row['ftg_id'];
                     // $alamat = $row['pjasa_alamat'];
-                  ?>
+                  ?> -->
                   <div class="col mx-auto">
                     <div class="card h-100 text-center">
                       <img src="/assets/img/blog/comments-1.jpg" width=100px height=100px class="rounded-circle mx-auto" alt="...">
@@ -170,6 +170,7 @@ session_start();
                               <?php                             
                             }
                           ?>
+                          
                         </p>
                         <a href="profil_sediajasa.php?id=<?php echo $id; ?>" class="btn btn-primary text-white">Kunjungi Profil</a>
                       </div>
