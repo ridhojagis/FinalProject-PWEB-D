@@ -1,14 +1,5 @@
 <?php
 session_start();
-
-if (isset($_SESSION['email']) && isset($_SESSION['user_type'])) {
-  if($_SESSION['user_type'] == 'siswa') {
-    header('Location: dashboard-siswa.php');
-  } else if (isset($_SESSION['email']) && $_SESSION['user_type'] == 'guru') {
-    header('Location: dashboard-guru.php');
-  }// else if (isset($_SESSION['email']) && $_SESSION['user_type'] == 'admin') {
-//   header('Location: dashboard_admin.php');
-}
 ?>
 
 <!DOCTYPE html>
@@ -51,28 +42,32 @@ if (isset($_SESSION['email']) && isset($_SESSION['user_type'])) {
       <h1 class="logo"><a href="index.php">SEKOLAHKU</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href=index.php" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
+      <?php
+          if(isset($_SESSION['email'])) {
+      ?>
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li>
             <div class="dropdown">
               <!-- <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dropdown button
               </button> -->
-              <a class="getstarted scrollto dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>
+              <a class="getstarted scrollto dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <?php echo $_SESSION['email']; ?>
+              </a>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="login-guru.php">Guru</a>
-                <a class="dropdown-item" href="login-siswa.php">Siswa</a>
+                <a class="dropdown-item" href="profil-guru.php">Profil</a>
+                <a class="dropdown-item" href="logout.php">Keluar</a>
               </ul>
             </div>
           </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
-
+        <?php
+          }
+        ?>
     </div>
   </header>
   <!-- End Header -->
@@ -118,70 +113,36 @@ if (isset($_SESSION['email']) && isset($_SESSION['user_type'])) {
   <!-- End Hero -->
 
   <main id="main">
-    <!-- ======= About Us Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
-          <h2>About Us</h2>
-          <p>Website Sekolahku merupakan Website yang memudahkan sistem pembelajaran di dalam sekolah</p><br>
-          <p>Dengan Website ini akan memudahkan bagi para Siswa dalam mencari informasi seputar sekolah dan mendukung kegiatan belajar mengajar.</p>
-          <p>Sebagai Guru juga akan dengan mudah untuk memantau perkembangan siswa.</p>
-          <p>Kemudian sebagai Wali Murid juga dapat menggunakan website ini untuk memantau perkembangan akademik anak dan melakukan pembayaran SPP sekolah.</p>
-        </div>
-
-        <!-- <div class="row content">
-          <div class="col-lg-6">
-            <p>
-              Viufinder yang merupakan penyedia layanan di bidang fotografi telah menyediakan beberapa jenis jasa diantaranya
-              sebagai berikut
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> Jasa Fotografer</li>
-              <li><i class="ri-check-double-line"></i> Jasa Editor</li>
-              <li><i class="ri-check-double-line"></i> Jasa Alat Fotografi</li>
-            </ul>
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>
-              Dengan layanan tersebut, kami berupaya memenuhi kebutuhan pelanggan yang terus bertambah setiap saatnya. Selain itu,
-              Viufinder juga memberikan kesempatan bagi Anda untuk menjadi bagian dari kami sebagai fotografer, editor ataupun sebagai
-              penyedia alat fotografer. 
-            </p>
-          </div>
-        </div> -->
-      </div>
-      
-    </section>
-    <!-- End About Us Section -->
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Services</h2>
+          <!-- <h2>Services</h2> -->
         </div>
+        <br><br>
         <div class="row">
           <div class="col-md-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="icon-box">
               <i class="bi bi-card-checklist"></i>
-              <h4>Presensi</h4>
-              <p>Lakukan presensi secara online.</p>
+              <a href=""><h4>Presensi</h4></a>
+              <p>Cek kehadiran siswa.</p>
             </div>
           </div>
           <div class="col-md-4 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
             <div class="icon-box">
               <i class="bi bi-bar-chart"></i>
-              <h4>Kemajuan Akademik</h4>
-              <p>Lihat perkembangan belajar</p>
+              <a href=""><h4>Kemajuan Akademik</h4></a>
+              <p>Lihat perkembangan belajar siswa.</p>
             </div>
           </div>
           <div class="col-md-4 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="300">
             <div class="icon-box">
               <i class="bi bi-binoculars"></i>
-              <h4>Pantau</h4>
-              <p>Mudah bagi wali murid melihat aktivitas pembelajaran siswa</p>
+                <a href="jadwalkelas-guru.php"><h4>Jadwal Kelas</h4></a>
+              <p>Lihat informasi jadwal kelas.</p>
             </div>
           </div>
         </div>

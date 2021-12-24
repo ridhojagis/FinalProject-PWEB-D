@@ -1,211 +1,186 @@
-<!-- <?php
+<?php
 session_start();
-?> -->
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="author" content="colorlib.com" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,600,700" rel="stylesheet" />
-    <link href="assets/css/main.css" rel="stylesheet" />
-    <link href="assets/img/favicon.png" rel="icon" />
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+?>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+<!DOCTYPE html>
+<html lang="en">
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet" />
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-    <link href="assets/css/style.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/389e9b29e9.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <!-- ======= Header ======= -->
-    <header id="header" class="sticky-top d-flex align-items-center" style="background-color: rgba(5, 87, 158, 0.9);">
-      <div class="container d-flex align-items-center justify-content-between">
-  
-        <h1 class="logo"><a href="">Sekolahku</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href=index.php" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-        <?php
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Home</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.php">SEKOLAHKU</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href=index.php" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <?php
           if(isset($_SESSION['email'])) {
-        ?>
-        <nav id="navbar" class="navbar">
-          <ul>
-            <li><a class="nav-link scrollto" href="dashboard-siswa.php">Dashboard</a></li>
-            <li>
-              <div class="dropdown">
-                <!-- <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown button
-                </button> -->
-                <a class="getstarted scrollto dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <?php echo $_SESSION['email']; ?>
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item" href="profil-siswa.php">Profil</a>
-                  <a class="dropdown-item" href="logout.php">Keluar</a>
-                </ul>
-              </div>
-            </li>
-          </ul>
-          <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav>
+      ?>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li>
+            <div class="dropdown">
+              <!-- <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown button
+              </button> -->
+              <a class="getstarted scrollto dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <?php echo $_SESSION['email']; ?>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="profil-siswa.php">Profil</a>
+                <a class="dropdown-item" href="logout.php">Keluar</a>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
         <?php
           }
         ?>
-      </div>
-    </header>
-    <!-- End Header -->
+    </div>
+  </header>
+  <!-- End Header -->
 
-    <div class="s008" style="background-image: url(./assets/img/bg-login.jpg);">
-      <form>
-        <div class="inner-form">
-          <div class="advance-search">
-            <h2 class="desc" align="center">Daftar Kelas</h2>
-            <div class="row">
-              <div class="col input-field">
-                <span>Nama</span>
-                <div class="">
-                  <input type="text" class="form-control" id="nama" placeholder="Nama Guru" />
-                </div>
-              </div>
-              <div class="input-field">
-                <span>Mata Pelajaran</span>
-                <div class="input-select">
-                  <select id="lokasi" data-trigger="" name="choices-single-defaul">
-                    <option placeholder="" value="">Semua Mata Pelajaran</option>
-                    <option>Matematika</option>
-                    <option>Fisika</option>
-                    <option>Kimia</option>
-                    <option>Biologi</option>
-                    <option>B. Inggris</option>
-                    <option>B. Indonesia</option>
-                    <option>Penjaskes</option>
-                  </select>
-                </div>
-              </div>
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex justify-cntent-center align-items-center" style="background-image: url(./assets/img/bg-login.jpg);">
+    <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel" >
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Selamat Datang di</span></h2>
+          <h2 class="animate__animated animate__fadeInDown">WEBSITE SEKOLAHKU</span></h2>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Practice makes us right, </h2>
+          <h2 class="animate__animated animate__fadeInDown">repetitions make us perfect.</h2>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">You are never</h2>
+          <h2 class="animate__animated animate__fadeInDown">too old to learn.</h2>
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+  </section>
+  <!-- End Hero -->
+
+  <main id="main">
+
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <!-- <h2>Services</h2> -->
+        </div>
+        <br><br>
+        <div class="row">
+          <div class="col-md-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box">
+              <i class="bi bi-card-checklist"></i>
+              <a href=""><h4>Presensi</h4></a>
+              <p>Lakukan presensi secara online.</p>
             </div>
-            <div class="row">
-              <div class="group-btn">
-                <button class="btn btn-primary" onclick="search()">Temukan</button>
-              </div>
+          </div>
+          <div class="col-md-4 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box">
+              <i class="bi bi-bar-chart"></i>
+              <a href=""><h4>Kemajuan Akademik</h4></a>
+              <p>Lihat perkembangan belajar</p>
             </div>
-            <div><br></div>
+          </div>
+          <div class="col-md-4 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box">
+              <i class="bi bi-binoculars"></i>
+                <a href="jadwalkelas-siswa.php"><h4>Jadwal Kelas</h4></a>
+              <p>Lihat informasi jadwal kelas</p>
+            </div>
           </div>
         </div>
-      </form>
-    </div>
+      </div>
+    </section>
+    <!-- End Services Section -->
 
+  </main>
+  <!-- End #main -->
 
-    <div class="foto">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col lg-12 info-panel">
-            <div class="row row-cols-1 row-cols-md-4 g-4">
-   
-            <!-- <?php
-                include_once("database/db_connection.php");
-                $name = (isset($_GET['nama'])) ? $_GET['nama'] : '';
-                $location = (isset($_GET['lokasi'])) ? $_GET['lokasi'] : '';
-                
-                $fotografer = "SELECT p.pjasa_id, p.pjasa_nama, p.pjasa_alamat, p.pjasa_foto, f.*, k.* FROM penyedia_jasa AS p
-                                INNER JOIN penyedia_jasa_rangkap AS r ON p.pjasa_id = r.pjasa_id
-                                INNER JOIN fotografer as f ON r.ftg_id = f.ftg_id
-                                INNER JOIN fotografer_kategori fk ON fk.ftg_id = f.ftg_id
-                                INNER JOIN kategori_jasa k ON k.ktg_id = fk.ktg_id
-                                WHERE p.pjasa_id NOT IN ($nonaktif)";
-                                // AND p.pjasa_id IN ($terverifikasi)";
-                $query = "SELECT DISTINCT(pjasa_id), pjasa_nama, pjasa_alamat, ftg_id, ftg_rating, ftg_tarif 
-                          FROM ($fotografer) ftg
-                          WHERE pjasa_nama LIKE '%$name%'
-                          AND pjasa_alamat LIKE '%$location%'
-                          -- AND ftg_rating > $ratingMin AND ftg_rating <= $ratingMax
-                          AND ktg_kategori LIKE '%$category%'";
-                
-
-                if($result = mysqli_query($conn, $query)) { 
-                  
-                } else {
-                  $error = $conn->errno . ' ' . $conn->error;
-                  echo $error; // 1054 Unknown column 'foo' in 'field list'
-                }
-
-                if ($result->num_rows > 0) {
-                  while($row = $result->fetch_assoc()){
-                    $nama = $row['guru_nama'];
-                    $id = $row['guru_id'];
-                    // $ftgid = $row['ftg_id'];
-                    // $alamat = $row['pjasa_alamat'];
-                  ?> -->
-                  <div class="col mx-auto">
-                    <div class="card h-100 text-center">
-                      <img src="/assets/img/blog/comments-1.jpg" width=100px height=100px class="rounded-circle mx-auto" alt="...">
-                      <div class="card-body">
-                        <div class="card-title">
-                          <h5><?php echo $nama; ?></h5>
-                          <h7><?php echo $alamat;?></h7>
-                        </div>
-                        <p>
-                          <?php
-                            $kategori = "SELECT ktg_kategori FROM kategori_jasa AS k
-                                        INNER JOIN fotografer_kategori AS fk ON k.ktg_id = fk.ktg_id
-                                        INNER JOIN fotografer AS f ON fk.ftg_id = f.ftg_id
-                                        WHERE f.ftg_id = $ftgid";
-                            $resultKategori = mysqli_query($conn, $kategori);
-                            echo "Kategori: <br>";
-                            while($rowKategori = $resultKategori->fetch_assoc()){
-                              ?>
-                              <div class="bd-highlight">
-                                <?php echo $rowKategori['ktg_kategori']; ?>
-                              </div>
-                              <?php                             
-                            }
-                          ?>
-                          
-                        </p>
-                        <a href="profil_sediajasa.php?id=<?php echo $id; ?>" class="btn btn-primary text-white">Kunjungi Profil</a>
-                      </div>
-                    </div>
-                  </div>     
-                <?php
-                  }
-                } else {
-                  echo "<h1>Tidak ada hasil</h1>";
-                }
-                ?>
-            </div>
-        </div>
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Sekolahku</span></strong>
       </div>
     </div>
+  </footer><!-- End Footer -->
 
-    <footer id="footer">
-  
-      <div class="container">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Sekolahku</span></strong>
-        </div>
-      </div>
-    </footer><!-- End Footer -->
-    <script src="assets/js/extention/choices.js"></script>
-    <script>
-      const customSelects = document.querySelectorAll("select");
-      const choices = new Choices("select", {
-        searchEnabled: false,
-        itemSelectText: "",
-        removeItemButton: true,
-      });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="assets/js/search.js"></script>
-  </body>
-  <!-- This templates was made by Colorlib (https://colorlib.com) -->
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    function kirim() {
+      alert("Pesan terkirim");
+
+    }
+  </script>
+</body>
+
 </html>
