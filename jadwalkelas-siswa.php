@@ -111,77 +111,111 @@ session_start();
         <div class="row justify-content-center">
           <div class="col lg-12 info-panel">
             <div class="row row-cols-1 row-cols-md-4 g-4">
-   
-            <!-- <?php
-                include_once("database/db_connection.php");
-                $name = (isset($_GET['nama'])) ? $_GET['nama'] : '';
-                $location = (isset($_GET['lokasi'])) ? $_GET['lokasi'] : '';
-                
-                $fotografer = "SELECT p.pjasa_id, p.pjasa_nama, p.pjasa_alamat, p.pjasa_foto, f.*, k.* FROM penyedia_jasa AS p
-                                INNER JOIN penyedia_jasa_rangkap AS r ON p.pjasa_id = r.pjasa_id
-                                INNER JOIN fotografer as f ON r.ftg_id = f.ftg_id
-                                INNER JOIN fotografer_kategori fk ON fk.ftg_id = f.ftg_id
-                                INNER JOIN kategori_jasa k ON k.ktg_id = fk.ktg_id
-                                WHERE p.pjasa_id NOT IN ($nonaktif)";
-                                // AND p.pjasa_id IN ($terverifikasi)";
-                $query = "SELECT DISTINCT(pjasa_id), pjasa_nama, pjasa_alamat, ftg_id, ftg_rating, ftg_tarif 
-                          FROM ($fotografer) ftg
-                          WHERE pjasa_nama LIKE '%$name%'
-                          AND pjasa_alamat LIKE '%$location%'
-                          -- AND ftg_rating > $ratingMin AND ftg_rating <= $ratingMax
-                          AND ktg_kategori LIKE '%$category%'";
-                
-
-                if($result = mysqli_query($conn, $query)) { 
-                  
-                } else {
-                  $error = $conn->errno . ' ' . $conn->error;
-                  echo $error; // 1054 Unknown column 'foo' in 'field list'
-                }
-
-                if ($result->num_rows > 0) {
-                  while($row = $result->fetch_assoc()){
-                    $nama = $row['guru_nama'];
-                    $id = $row['guru_id'];
-                    // $ftgid = $row['ftg_id'];
-                    // $alamat = $row['pjasa_alamat'];
-                  ?> -->
                   <div class="col mx-auto">
                     <div class="card h-100 text-center">
                       <img src="/assets/img/blog/comments-1.jpg" width=100px height=100px class="rounded-circle mx-auto" alt="...">
                       <div class="card-body">
                         <div class="card-title">
-                          <h5><?php echo $nama; ?></h5>
-                          <h7><?php echo $alamat;?></h7>
+                          <h5>MATEMATIKA</h5>
+                          <h7>Yanto Suharjo</h7>
                         </div>
                         <p>
-                          <?php
-                            $kategori = "SELECT ktg_kategori FROM kategori_jasa AS k
-                                        INNER JOIN fotografer_kategori AS fk ON k.ktg_id = fk.ktg_id
-                                        INNER JOIN fotografer AS f ON fk.ftg_id = f.ftg_id
-                                        WHERE f.ftg_id = $ftgid";
-                            $resultKategori = mysqli_query($conn, $kategori);
-                            echo "Kategori: <br>";
-                            while($rowKategori = $resultKategori->fetch_assoc()){
-                              ?>
-                              <div class="bd-highlight">
-                                <?php echo $rowKategori['ktg_kategori']; ?>
-                              </div>
-                              <?php                             
-                            }
-                          ?>
-                          
+                          Senin, 10:00 - 12:00
                         </p>
-                        <a href="profil_sediajasa.php?id=<?php echo $id; ?>" class="btn btn-primary text-white">Kunjungi Profil</a>
+                        <a href="" class="btn btn-primary text-white">Lihat Kelas</a>
                       </div>
                     </div>
-                  </div>     
-                <?php
-                  }
-                } else {
-                  echo "<h1>Tidak ada hasil</h1>";
-                }
-                ?>
+                  </div>   
+                  <div class="col mx-auto">
+                    <div class="card h-100 text-center">
+                      <img src="/assets/img/blog/comments-1.jpg" width=100px height=100px class="rounded-circle mx-auto" alt="...">
+                      <div class="card-body">
+                        <div class="card-title">
+                          <h5>FISIKA</h5>
+                          <h7>Yanto Suharjo</h7>
+                        </div>
+                        <p>
+                          Senin, 10:00 - 12:00
+                        </p>
+                        <a href="" class="btn btn-primary text-white">Lihat Kelas</a>
+                      </div>
+                    </div>
+                  </div>  
+                  <div class="col mx-auto">
+                    <div class="card h-100 text-center">
+                      <img src="/assets/img/blog/comments-1.jpg" width=100px height=100px class="rounded-circle mx-auto" alt="...">
+                      <div class="card-body">
+                        <div class="card-title">
+                          <h5>KIMIA</h5>
+                          <h7>Yanto Suharjo</h7>
+                        </div>
+                        <p>
+                          Senin, 10:00 - 12:00
+                        </p>
+                        <a href="" class="btn btn-primary text-white">Lihat Kelas</a>
+                      </div>
+                    </div>
+                  </div>  
+                  <div class="col mx-auto">
+                    <div class="card h-100 text-center">
+                      <img src="/assets/img/blog/comments-1.jpg" width=100px height=100px class="rounded-circle mx-auto" alt="...">
+                      <div class="card-body">
+                        <div class="card-title">
+                          <h5>BIOLOGI</h5>
+                          <h7>Yanto Suharjo</h7>
+                        </div>
+                        <p>
+                          Senin, 10:00 - 12:00
+                        </p>
+                        <a href="" class="btn btn-primary text-white">Lihat Kelas</a>
+                      </div>
+                    </div>
+                  </div>  
+                  <div class="col mx-auto">
+                    <div class="card h-100 text-center">
+                      <img src="/assets/img/blog/comments-1.jpg" width=100px height=100px class="rounded-circle mx-auto" alt="...">
+                      <div class="card-body">
+                        <div class="card-title">
+                          <h5>B. INGGRIS</h5>
+                          <h7>Yanto Suharjo</h7>
+                        </div>
+                        <p>
+                          Senin, 10:00 - 12:00
+                        </p>
+                        <a href="" class="btn btn-primary text-white">Lihat Kelas</a>
+                      </div>
+                    </div>
+                  </div>  
+                  <div class="col mx-auto">
+                    <div class="card h-100 text-center">
+                      <img src="/assets/img/blog/comments-1.jpg" width=100px height=100px class="rounded-circle mx-auto" alt="...">
+                      <div class="card-body">
+                        <div class="card-title">
+                          <h5>B. INDONESIA</h5>
+                          <h7>Yanto Suharjo</h7>
+                        </div>
+                        <p>
+                          Senin, 10:00 - 12:00
+                        </p>
+                        <a href="" class="btn btn-primary text-white">Lihat Kelas</a>
+                      </div>
+                    </div>
+                  </div>  
+                  <div class="col mx-auto">
+                    <div class="card h-100 text-center">
+                      <img src="/assets/img/blog/comments-1.jpg" width=100px height=100px class="rounded-circle mx-auto" alt="...">
+                      <div class="card-body">
+                        <div class="card-title">
+                          <h5>PENJASKES</h5>
+                          <h7>Yanto Suharjo</h7>
+                        </div>
+                        <p>
+                          Senin, 10:00 - 12:00
+                        </p>
+                        <a href="" class="btn btn-primary text-white">Lihat Kelas</a>
+                      </div>
+                    </div>
+                  </div>  
             </div>
         </div>
       </div>
